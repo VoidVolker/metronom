@@ -4,11 +4,11 @@
 
 Программа с определенной периодичостью меняет изображение на экране(четыре вертикальные полосы). 
 
-Окно программы состоит из двух частей. 
-
 ![Скриншот](http://brainstorage.habrastorage.org/item_custom_image_images/3/31/31274/metronom_1.jpg)
 
 ![Скриншот](http://brainstorage.habrastorage.org/item_custom_image_images/3/31/31272/metronom_2.jpg)
+
+Окно программы состоит из двух частей.
 
 Верхняя часть: 
   
