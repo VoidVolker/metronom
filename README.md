@@ -4,9 +4,9 @@
 
 Программа с определенной периодичостью меняет изображение на экране(четыре вертикальные полосы). 
 
-![Скриншот](http://brainstorage.habrastorage.org/item_custom_image_images/4/41/41330/s2.png)
-
 ![Скриншот](http://brainstorage.habrastorage.org/item_custom_image_images/4/41/41328/s1.png)
+
+![Скриншот](http://brainstorage.habrastorage.org/item_custom_image_images/4/41/41330/s2.png)
 
 Окно программы состоит из двух частей.
 
