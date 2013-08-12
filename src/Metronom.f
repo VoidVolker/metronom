@@ -1,11 +1,11 @@
   \  Программа:  "Метроном"
-  \  Версия: 3.6
+  \  Версия: 3.7
   \  Автор:  VoidVolker
   \  Способ распространения: бесплатно
   \  Исходники: открытые
   \  Лицензия: MIT
 
-DIS-OPT \ для версий ниже 4.00 build 10
+\ DIS-OPT \ для версий ниже 4.00 build 10
 REQUIRE WINDOWS... ~yz/lib/winlib.f
 REQUIRE button ~yz/lib/winctl.f
 REQUIRE toolbar ~yz/lib/wincc.f
@@ -14,7 +14,7 @@ lib\win\const.f
 REQUIRE win-pos ~profit/lib/winlibex.f
 REQUIRE ATTACH-LINE ~pinka/samples/2005/lib/append-file.f
 
-SET-OPT
+\ SET-OPT
 \ Обозначения:
 \ $ - color, цвет
 \ -------------------------------------
@@ -66,7 +66,7 @@ WINAPI: GetKeyState USER32.DLL
 QUAN win0
 QUAN win0-xpos
 QUAN win0-ypos
-630 VALUE win0-x
+850 VALUE win0-x
 200 VALUE win0-y
 0 VALUE maximize?
 
@@ -133,7 +133,7 @@ QUAN cancel?
 
 : start-place
   1 1 start-lbl ctlmove
-  100 19 start-lbl ctlresize
+  130 24 start-lbl ctlresize
 ;
 
 : start-draw
@@ -151,14 +151,16 @@ QUAN cancel?
   arial #Hz-lbl -font!
   $font-Hz #Hz-lbl -color!
   $bg-Hz #Hz-lbl -bgcolor!
-  120 1 #Hz-lbl ctlmove
+  presets-lbl -xsize@ 180 + 2  #Hz-lbl  ctlmove
+  \ 150 1 #Hz-lbl ctlmove
+  \ 150 1 #Hz-lbl ctlmove
   #Hz-lbl force-redraw
 ;
 
 : quad-draw
   quads-colors quad# -TH @ quad0 -bgcolor!
-  win0 -xsize@  quads / DUP win0 -ysize@ 21 - quad0 ctlresize
-  quad# * 21 quad0 ctlmove
+  win0 -xsize@  quads / DUP win0 -ysize@ 27 - quad0 ctlresize
+  quad# * 27 quad0 ctlmove
   quad0 force-redraw
 ;
 
@@ -213,8 +215,9 @@ PROC: PF12  пресеты 11 CELLS + @ частота! PROC;
   пресеты"  presets-lbl -text!
   $bg-win0 presets-lbl -bgcolor!
   $font-prs presets-lbl -color!
-  205 2  presets-lbl  ctlmove
-  presets-lbl -xsize@ 19 presets-lbl ctlresize
+  \ 235 2  presets-lbl  ctlmove
+  150 2  presets-lbl  ctlmove
+  presets-lbl -xsize@ 24 presets-lbl ctlresize
   presets-lbl force-redraw
 ;
 
@@ -236,8 +239,8 @@ PROC: Hz>F12  Hz пресеты 11 CELLS + ! presets-draw PROC;
 : применить-параметры
   win0-colred
   start-draw
-  Hz-draw
   presets-draw
+  Hz-draw
   quad-draw
 ;
 
@@ -330,7 +333,7 @@ PROC: about
   DUP -color@ about-win -color! 
   DUP -bgcolor@ about-win -bgcolor! |
   ===
-  "   Версия: 3.6" label DUP win-swap-colors  |
+  "   Версия: 3.7" label DUP win-swap-colors  |
   ===
   "   Автор:  VoidVolker" label DUP win-swap-colors  |
   ===
@@ -338,7 +341,7 @@ PROC: about
   ===
   "   Исходники: открытые" label DUP win-swap-colors  |
   ===
-  "   Лицензия: GPL" label DUP win-swap-colors  |
+  "   Лицензия: MIT" label DUP win-swap-colors  |
   ===
   "   Связь с автором: voidvolker@gmail.com  " label DUP win-swap-colors  |
   GRID; about-win -grid!
