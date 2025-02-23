@@ -4,9 +4,9 @@
 
 Программа с определенной периодичостью меняет изображение на экране(четыре прямоугольника).
 
-![Скриншот](http://brainstorage.habrastorage.org/item_custom_image_images/4/41/41328/s1.png)
+![Скриншот](https://github.com/user-attachments/assets/26f3e3d6-d13b-4c43-8f45-cddb86d1a605)
 
-![Скриншот](http://brainstorage.habrastorage.org/item_custom_image_images/4/41/41330/s2.png)
+![Скриншот](https://github.com/user-attachments/assets/6b4b2768-1fd9-4265-bf98-98714ba53927)
 
 Окно программы состоит из двух частей.
 
